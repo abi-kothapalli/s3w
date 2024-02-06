@@ -1,14 +1,20 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
 <style type="text/css">
 	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 		font-weight:300;
-		font-size:18px;
+		font-size:26px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 1100px;
+		width: 1400px;
 	}
 	
 	h1 {
@@ -118,10 +124,10 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
-	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
-	<meta property="og:description" content="Paper description." />
+	<title>Stereographic Spherical Sliced Wasserstein Distances</title>
+	<meta property="og:image" content="./resources/main.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Stereographic Spherical Sliced Wasserstein Distances" />
+	<meta property="og:description" content="Stereographic Spherical Sliced Wasserstein Distances" />
 
 	<!-- Get from Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -138,149 +144,294 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<span style="font-size:36px">Stereographic Spherical Sliced Wasserstein Distances</span>
+        <br>
+        <br>
+		<table align=center width=1500px>
+			<table align=center width=1200px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:26px"><a href="https://huytranirl.github.io/">Huy Tran*</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:26px"><a href="https://yikun-baio.github.io ">Yikun Bai*</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:26px"><a href="https://abi-kothapalli.github.io/">Abihith Kothapalli*</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:26px"><a href="https://ashkan13776.github.io/">Ashkan Shahbazi</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:26px"><a href="https://www.linkedin.com/in/xinran-l-5777a0205/">Xinran Liu</a></span>
+						</center>
+					</td>
+					<!-- <br></tr> -->
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:26px"><a href="https://scholar.google.com/citations?user=7RHakmMAAAAJ&hl=en&oi=ao">Rocio Diaz Martin</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:26px"><a href="https://skolouri.github.io/">Soheil Kolouri</a></span>
 						</center>
 					</td>
 				</tr>
 			</table>
-			<table align=center width=250px>
-				<tr>
+            <br>
+			<table align=center width=500px>
+
+                <tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:26px"><a href='https://arxiv.org/abs/2402.02345'>[Paper]</a></span>
 						</center>
 					</td>
-					<td align=center width=120px>
+					<!-- <td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
 						</center>
-					</td>
+					</td> -->
 				</tr>
 			</table>
 		</table>
 	</center>
-
+    <center>
+		<span style="font-size:26px"> <i>Preprint</i></span>
+	</center>
 	<center>
-		<table align=center width=850px>
+        <br>
+		<table align=center width=1000px style="font-size:20px">
 			<tr>
-				<td width=260px>
+				<td width=400px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/main.png"/>
 					</center>
 				</td>
 			</tr>
+            <br>
+            <td style="text-align: justify;">
+                Depiction of stereographic projection $\phi: \mathbb{S}^2\backslash \{s_n\} \to \mathbb{R}^2$ (a), the stereographic Radon transform integration surfaces on the sphere, i.e., the level sets of $\langle \phi(x),\theta\rangle$ for a fixed $\theta\in \mathbb{R}^d$ (b), and the generalized stereographic Radon transform integration surfaces on the sphere, i.e. the level sets of $\langle h\circ\phi(x),\theta\rangle$ for a fixed $\theta\in \mathbb{R}^{d'}$.
+            </td>
 		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
-				</td>
-			</tr>
-		</table>
+
 	</center>
 
 	<hr>
 
-	<table align=center width=850px>
+	<table align=center width=1000px style="font-size:20px">
 		<center><h1>Abstract</h1></center>
 		<tr>
-			<td>
-				This is my abstract.
+			<td style="text-align: justify;">
+				Comparing spherical probability distributions is of great interest in various fields, including geology, medical domains, computer vision, and deep representation learning. The utility of optimal transport-based distances, such as the Wasserstein distance, for comparing probability measures has spurred active research in developing computationally efficient variations of these distances for spherical probability measures. This paper introduces a high-speed and highly parallelizable distance for comparing spherical measures using the stereographic projection and the generalized Radon transform, which we refer to as the Stereographic Spherical Sliced Wasserstein (S3W) distance. We carefully address the distance distortion caused by the stereographic projection and provide an extensive theoretical analysis of our proposed metric and its rotationally invariant variation. Finally, we evaluate the performance of the proposed metrics and compare them with recent baselines in terms of both speed and accuracy through a wide range of numerical studies, including gradient flows and self-supervised learning.
 			</td>
 		</tr>
 	</table>
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
-
-	<table align=center width=800px>
-		<br>
+    <table align=center width=1000px style="font-size:20px">
+		<center><h1>Contributions</h1></center>
 		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
+			<td style="text-align: justify;">
+				<ul>
+                    <li>Introducing a computationally efficient transport distance, Stereographic Spherical Sliced Wasserstein distance (S3W), for spherical probability measures. </li>
+                    <li>Providing a rotationally invariant variation of the proposed distance, Rotationally Invariant Stereographic Spherical Sliced Wasserstein distance (RI-S3W). </li>
+                    <li> Offering theoretical analysis of the proposed distances. </li> 
+                    <li> Demonstrating the performance, both in terms of speed and accuracy, of the proposed distances in diverse applications, including gradient flows on the sphere, representation learning with Sliced-Wasserstein Auto-Encoders (SWAEs), spherical density estimation via normalizing flows, sliced-Wasserstein variational inference on the sphere, and self-supervised learning. </li> 
+                </ul>
+			</td>
 		</tr>
 	</table>
-	<hr>
+	<br>
 
-	<center><h1>Code</h1></center>
+    <hr>
 
-	<table align=center width=420px>
-		<center>
-			<tr>
-				<td>
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=400px>
+
+	<table align=center width=1000px style="font-size:20px">
+		<center><h1>Distance Distortion of Stereographic Projection</h1></center>
 		<tr>
-			<td align=center width=400px>
+			<td width=300px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<img class="round" style="width:600px; margin-bottom: 15px;" src="./resources/distortion.png"/>
 				</center>
 			</td>
 		</tr>
-	</table>
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					Short description if wanted
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
-			</center>
-		</span>
-	</table>
-	<br>
-	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
-		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
+		<!-- <br> -->
+		<tr> 
+			<td width=300px style="text-align: justify;">
+				Spherical distance (i.e., the arclength) versus the distance after stereographic projection, where CC denotes Pearson's correlation coefficient.  From left to right, when the injective function $h=id$, and the distance is $\|\phi(s)-\phi(s')\|$ (recall that $\phi$ is the stereographic projection) (a),  when $h(x)=\arccos\left(\frac{\|x\|^2-1}{\|x\|^2+1}\right)\frac{x}{\|x\|}$ and the distance is $\|h(\phi(s))-h(\phi(s'))\|$ (b),  when $h(x)=\arccos\left(\frac{\|x\|^2-1}{\|x\|^2+1}\right)\frac{x}{\|x\|}$ and the distance is $\min(\|h(\phi(s))-h(\phi(s'))\|,2\pi-\|h(\phi(s))-h(\phi(s'))\|)$ (c), and finally when $h(x)=\left[\frac{1}{C}\arccos\left(\frac{\|x\|^2-1}{\|x\|^2+1}\right)\frac{x}{\|x\|},\rho(x)\right]$ where $C\geq 2\pi$ and $\rho(x)$ is a trained injective neural network minimizing the difference between the arclength and Euclidean distance in the embedding space for points in $\mathbb{S}^d$ (d).
 			</td>
 		</tr>
 	</table>
-	<br>
+	<br> 
 
+    <hr>
+
+
+    <table align=center width=1000px style="font-size:20px">
+		<center><h1>Runtime Comparison</h1></center>
+		<tr>
+			<td width=300px>
+				<center>
+					<img class="round" style="width:600px; margin-bottom: 15px;" src="./resources/runtime.png"/>
+				</center>
+			</td>
+		</tr>
+		<!-- <br> -->
+		<tr> 
+			<td width=300px style="text-align: justify;">
+				Runtime comparison for $ARI\text{-}S3W_2$, $RI\text{-}S3W_2$, $S3W$, $SW_2$, $SSW_1$ (using level median formula), $SSW_2$ with binary search (BS) and antipodal closed form (for uniform distribution), Wasserstein, and Sinkhorn with geodesic distance as cost function.
+			</td>
+		</tr>
+	</table>
+	<br> 
+
+    <hr> 
+
+	<center><h1>Experimental Highlights</h1></center>
+	<table align=center width=1000px style="font-size:20px">
+        <!-- GRADIENT FLOWS -->
+		<tr> 
+			<td width=300px style="text-align: justify;">
+				<h3>Gradient Flows on Sphere</h3>
+			</td>
+		</tr>
+		<tr style="height: 15px;">
+			<td></td>
+		</tr>
+		<tr>
+			<td width=1000px>
+				<center>
+					<img style="width:1000px; height:auto;" src=""/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				Description
+			</td>
+		</tr>
+		<tr style="height: 40px;">
+			<td></td>
+		</tr>
+        <!-- SELF-SUPERVISED LEARNING -->
+		<tr> 
+			<td width=300px style="text-align: justify;">
+				<h3>Self-Supervised Contrastive Learning</h3>
+			</td>
+		</tr>
+		<tr style="height: 15px;">
+			<td></td>
+		</tr>
+		<tr>
+			<td width=1000px>
+				<center>
+					<img style="width:1000px; height:auto;" src=""/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				Description
+			</td>
+		</tr>
+		<tr style="height: 40px;">
+			<td></td>
+		</tr>
+        <!-- SLICED WASS AUTOENCODER -->
+		<tr> 
+			<td width=300px style="text-align: justify;">
+				<h3>Sliced-Wasserstein Autoencoders</h3>
+			</td>
+		</tr>
+		<tr style="height: 15px;">
+			<td></td>
+		</tr>
+		<tr>
+			<td width=1000px>
+				<center>
+					<img style="width:1000px; height:auto;" src=""/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				Description
+			</td>
+		</tr>
+		<tr style="height: 40px;">
+			<td></td>
+		</tr>
+        <!-- Earth Density Estimation -->
+		<tr> 
+			<td width=300px style="text-align: justify;">
+				<h3>Earth Density Estimation</h3>
+			</td>
+		</tr>
+		<tr style="height: 15px;">
+			<td></td>
+		</tr>
+		<tr>
+			<td width=1000px>
+				<center>
+					<img style="width:1000px; height:auto;" src=""/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				Description
+			</td>
+		</tr>
+		<tr style="height: 40px;">
+			<td></td>
+		</tr>
+	</table>
+
+    <hr>
+
+    
+
+	<table align=center width=750 style="font-size:20px">
+		<center><h1>BibTeX</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:270px" src="./resources/cover_page.png"/></a></td>
+			<td><span style="font-size:20px">Huy Tran*, Yikun Bai*, Abihith Kothapalli*, Ashkan Shahbazi, Xinran Liu, Rocio Diaz Martin, Soheil Kolouri<br>
+				<b>Stereographic Spherical Sliced Wasserstein Distances</b><br>
+				Preprint, 2024.<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<br>
+				If you find our work useful, please consider citing us using the following BibTeX: 
+                <!-- <br>
+                <pre style="background-color: #f5f5f5; text-align: left; font-size:14px;"><code>
+@inproceedings{tran2024stereographic,
+    title={Stereographic Spherical Sliced Wasserstein Distances}, 
+    author={Huy Tran and Yikun Bai and Abihith Kothapalli and Ashkan Shahbazi and Xinran Liu and Rocio Diaz Martin and Soheil Kolouri},
+    year={2024},
+    eprint={2402.02345},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+                </code></pre> -->
+                </span>
+			</td>
+		</tr>
+	</table>
 	<table align=center width=600px>
 		<tr>
-			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			<td><span style="font-size:24px"><center>
+				<a href="./resources/bibtex.txt">[BibTeX]</a>
 			</center></td>
 		</tr>
 	</table>

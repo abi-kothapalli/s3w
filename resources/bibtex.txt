@@ -1,6 +1,8 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@inproceedings{tran2024stereographic,
+      title={Stereographic Spherical Sliced Wasserstein Distances}, 
+      author={Huy Tran and Yikun Bai and Abihith Kothapalli and Ashkan Shahbazi and Xinran Liu and Rocio Diaz Martin and Soheil Kolouri},
+      year={2024},
+      eprint={2402.02345},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
