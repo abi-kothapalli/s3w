@@ -219,19 +219,14 @@
 			<tr>
 				<td width=400px>
 					<center>
-						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/main.png"/>
+						<img style="width:1000px; height:auto; margin-bottom: 15px; z-index: -100;" src="./resources/_gf.gif"/>
 					</center>
 				</td>
 			</tr>
-            <br>
-            <td style="text-align: justify;">
-                Depiction of stereographic projection $\phi: \mathbb{S}^2\backslash \{s_n\} \to \mathbb{R}^2$ (a), the stereographic Radon transform integration surfaces on the sphere, i.e., the level sets of $\langle \phi(x),\theta\rangle$ for a fixed $\theta\in \mathbb{R}^d$ (b), and the generalized stereographic Radon transform integration surfaces on the sphere, i.e. the level sets of $\langle h\circ\phi(x),\theta\rangle$ for a fixed $\theta\in \mathbb{R}^{d'}$.
-            </td>
 		</table>
-
 	</center>
 
-	<hr>
+	<hr style="z-index: 100;">
 
 	<table align=center width=1000px style="font-size:20px">
 		<center><h1>Abstract</h1></center>
@@ -240,6 +235,18 @@
 				Comparing spherical probability distributions is of great interest in various fields, including geology, medical domains, computer vision, and deep representation learning. The utility of optimal transport-based distances, such as the Wasserstein distance, for comparing probability measures has spurred active research in developing computationally efficient variations of these distances for spherical probability measures. This paper introduces a high-speed and highly parallelizable distance for comparing spherical measures using the stereographic projection and the generalized Radon transform, which we refer to as the Stereographic Spherical Sliced Wasserstein (S3W) distance. We carefully address the distance distortion caused by the stereographic projection and provide an extensive theoretical analysis of our proposed metric and its rotationally invariant variation. Finally, we evaluate the performance of the proposed metrics and compare them with recent baselines in terms of both speed and accuracy through a wide range of numerical studies, including gradient flows and self-supervised learning.
 			</td>
 		</tr>
+
+        <tr>
+            <td width=400px>
+                <br><br>
+                <center>
+                    <img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/main.png"/>
+                </center>
+            </td>
+        </tr>
+        <td style="text-align: justify;">
+            Depiction of stereographic projection $\phi: \mathbb{S}^2\backslash \{s_n\} \to \mathbb{R}^2$ (a), the stereographic Radon transform integration surfaces on the sphere, i.e., the level sets of $\langle \phi(x),\theta\rangle$ for a fixed $\theta\in \mathbb{R}^d$ (b), and the generalized stereographic Radon transform integration surfaces on the sphere, i.e. the level sets of $\langle h\circ\phi(x),\theta\rangle$ for a fixed $\theta\in \mathbb{R}^{d'}$.
+        </td>
 	</table>
 	<br>
 
@@ -262,7 +269,7 @@
     <hr>
 
 
-	<table align=center width=1000px style="font-size:20px">
+	<!-- <table align=center width=1000px style="font-size:20px">
 		<center><h1>Distance Distortion of Stereographic Projection</h1></center>
 		<tr>
 			<td width=300px>
@@ -271,7 +278,6 @@
 				</center>
 			</td>
 		</tr>
-		<!-- <br> -->
 		<tr> 
 			<td width=300px style="text-align: justify;">
 				Spherical distance (i.e., the arclength) versus the distance after stereographic projection, where CC denotes Pearson's correlation coefficient.  From left to right, when the injective function $h=id$, and the distance is $\|\phi(s)-\phi(s')\|$ (recall that $\phi$ is the stereographic projection) (a),  when $h(x)=\arccos\left(\frac{\|x\|^2-1}{\|x\|^2+1}\right)\frac{x}{\|x\|}$ and the distance is $\|h(\phi(s))-h(\phi(s'))\|$ (b),  when $h(x)=\arccos\left(\frac{\|x\|^2-1}{\|x\|^2+1}\right)\frac{x}{\|x\|}$ and the distance is $\min(\|h(\phi(s))-h(\phi(s'))\|,2\pi-\|h(\phi(s))-h(\phi(s'))\|)$ (c), and finally when $h(x)=\left[\frac{1}{C}\arccos\left(\frac{\|x\|^2-1}{\|x\|^2+1}\right)\frac{x}{\|x\|},\rho(x)\right]$ where $C\geq 2\pi$ and $\rho(x)$ is a trained injective neural network minimizing the difference between the arclength and Euclidean distance in the embedding space for points in $\mathbb{S}^d$ (d).
@@ -280,7 +286,7 @@
 	</table>
 	<br> 
 
-    <hr>
+    <hr> -->
 
 
     <table align=center width=1000px style="font-size:20px">
@@ -288,7 +294,7 @@
 		<tr>
 			<td width=300px>
 				<center>
-					<img class="round" style="width:600px; margin-bottom: 15px;" src="./resources/runtime.png"/>
+					<img class="round" style="width:1000px; margin-bottom: 15px;" src="./resources/runtime.png"/>
 				</center>
 			</td>
 		</tr>
@@ -317,13 +323,13 @@
 		<tr>
 			<td width=1000px>
 				<center>
-					<img style="width:1000px; height:auto;" src=""/>
+					<img style="width:1000px; height:auto;" src="resources/gf.png"/>
 				</center>
 			</td>
 		</tr>
 		<tr> 
 			<td width=300px style="text-align: center; font-size:20px">
-				Description
+				Learning a mixture of $12$ von Mises–Fisher distributions. $ARI\text{-}S3W$ (30) has $30$ rotations, pool size of $1000$. $S3W$ variants use $\text{LR}=0.01$. $SSW$ has an additional $\text{LR}=0.05$ for better comparison. The plots show convergence of different distances w.r.t. iterations and runtime.
 			</td>
 		</tr>
 		<tr style="height: 40px;">
@@ -341,13 +347,15 @@
 		<tr>
 			<td width=1000px>
 				<center>
-					<img style="width:1000px; height:auto;" src=""/>
+					<img style="width:333px; height:auto; float: left;" src="resources/features_plot_s3w.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/features_plot_ri-s3w.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/features_plot_ari-s3w.png"/>
 				</center>
 			</td>
 		</tr>
 		<tr> 
 			<td width=300px style="text-align: center; font-size:20px">
-				Description
+				SSL latent space visualization on CIFAR-10 using $S3W$, $RI$-$S3W$, and $ARI$-$S3W$.
 			</td>
 		</tr>
 		<tr style="height: 40px;">
@@ -365,13 +373,46 @@
 		<tr>
 			<td width=1000px>
 				<center>
-					<img style="width:1000px; height:auto;" src=""/>
+					<img style="width:auto; height:125px; float: left; margin-right: 20px;" src="resources/swae_s3w_latent.png"/>
+					<img style="width:auto; height:125px; float: left;" src="resources/swae_s3w_out.png"/>
 				</center>
 			</td>
 		</tr>
 		<tr> 
 			<td width=300px style="text-align: center; font-size:20px">
-				Description
+				$S3W$-SWAE latent space visualization and reconstruction.
+			</td>
+		</tr>
+        <tr style="height: 40px;">
+			<td></td>
+		</tr>
+        <tr>
+			<td width=1000px>
+				<center>
+					<img style="width:auto; height:125px; float: left; margin-right: 20px;" src="resources/swae_ris3w_latent.png"/>
+					<img style="width:auto; height:125px; float: left;" src="resources/swae_ris3w_out.png"/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				$RI$-$S3W$-SWAE latent space visualization and reconstruction.
+			</td>
+		</tr>
+        <tr style="height: 40px;">
+			<td></td>
+		</tr>
+        <tr>
+			<td width=1000px>
+				<center>
+					<img style="width:auto; height:125px; float: left; margin-right: 20px;" src="resources/swae_aris3w_latent.png"/>
+					<img style="width:auto; height:125px; float: left;" src="resources/swae_aris3w_out.png"/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				$ARI$-$S3W$-SWAE latent space visualization and reconstruction.
 			</td>
 		</tr>
 		<tr style="height: 40px;">
@@ -389,13 +430,49 @@
 		<tr>
 			<td width=1000px>
 				<center>
-					<img style="width:1000px; height:auto;" src=""/>
+					<img style="width:333px; height:auto; float: left;" src="resources/S3W_Quakes_updated.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/S3W_Flood_updated.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/S3W_Fire_updated.png"/>
 				</center>
 			</td>
 		</tr>
 		<tr> 
 			<td width=300px style="text-align: center; font-size:20px">
-				Description
+				Earth density estimation using normalizing flow with $S3W$ on Earthquake, Flood, and Fire datasets.
+			</td>
+		</tr>
+		<tr style="height: 40px;">
+			<td></td>
+		</tr>
+        <tr>
+			<td width=1000px>
+				<center>
+					<img style="width:333px; height:auto; float: left;" src="resources/RI5_Quakes_updated.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/RI5_Flood_updated.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/RI5_Fire_updated.png"/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				Earth density estimation using normalizing flow with $RI$-$S3W$ on Earthquake, Flood, and Fire datasets.
+			</td>
+		</tr>
+		<tr style="height: 40px;">
+			<td></td>
+		</tr>
+        <tr>
+			<td width=1000px>
+				<center>
+					<img style="width:333px; height:auto; float: left;" src="resources/ARI50_Quakes.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/ARI50_Flood.png"/>
+					<img style="width:333px; height:auto; float: left;" src="resources/ARI50_Fire.png"/>
+				</center>
+			</td>
+		</tr>
+		<tr> 
+			<td width=300px style="text-align: center; font-size:20px">
+				Earth density estimation using normalizing flow with $ARI$-$S3W$ on Earthquake, Flood, and Fire datasets.
 			</td>
 		</tr>
 		<tr style="height: 40px;">
